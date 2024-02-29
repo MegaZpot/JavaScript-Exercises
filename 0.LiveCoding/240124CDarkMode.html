@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style id="tema">
+        body.tema-claro{
+            background-color: blanchedalmond;
+            color: darkblue;
+        }
+        body.tema-oscuro{
+            background-color: #333;
+            color: #fff;
+        }
+        
+    </style>
+</head>
+<body class="tema-claro">
+    
+
+    <!-- Crear una página con un botón que cambie el tema (por ejemplo, de claro a oscuro) al hacer clic -->
+
+    <button id="modoOscuro" onclick="cambiarModo()">Cambiar Modo</button>
+
+
+
+    <script>
+
+        function cambiarModo(){
+            const estilos = document.getElementById("tema")
+            const body = document.body
+            
+            if(body.classList.contains("tema-claro")){
+                body.classList.remove("tema-claro")
+                body.classList.add("tema-oscuro")
+            } else {
+                body.classList.remove("tema-oscuro")
+                body.classList.add("tema-claro")
+            }
+
+            // tema.innerHTML = "body{background-color : #333; color: #fff;}"
+
+
+        }
+
+    </script>
+
+
+
+
+
+</body>
+</html>

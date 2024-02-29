@@ -1,0 +1,106 @@
+<!--
+Ejercicio 1: Calculadora de Propina
+Crea una calculadora de propina que calcule automáticamente el monto de la propina basado en el servicio recibido.
+-->
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="total" placeholder="Introduzca aqui el total" />
+    <label for="total"></label>
+    <input type="number" id="porcentaje" placeholder="porcentaje de propina" />
+    <label for="porcentaje"></label>
+    <p id="resultado"></p>
+    <button onclick="calcularPropina()">Calcular</button>
+
+    <script>
+      const calcularPropina = () => {
+        const total = parseFloat(document.getElementById("total").value);
+        const porcentaje = parseFloat(
+          document.getElementById("porcentaje").value
+        );
+
+        if (isNaN(total) || isNaN(porcentaje)) {
+          document.getElementById("resultado").textContent =
+            "Los datos introducidos no son números";
+        } else {
+          const propina = total * (porcentaje / 100);
+          document.getElementById(
+            "resultado"
+          ).textContent = `La propina son ${propina.toFixed(2)}€`;
+        }
+      };
+    </script>
+  </body>
+</html>
+-->
+
+
+
+<!-- 
+Ejercicio 2: Selector de Color RGB
+Crea un selector de color que muestre el valor RGB del color seleccionado.
+ -->
+ 
+<!--
+ <!DOCTYPE html>
+ <html lang="en">
+   <head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>Document</title>
+   </head>
+   <body>
+     <input type="range" id="rojo" min="0" max="255" value="0" />
+     <input type="range" id="verde" min="0" max="255" value="0" />
+     <input type="range" id="azul" min="0" max="255" value="0" />
+ 
+     <div
+       id="color"
+       style="width: 100px; height: 100px; border: 1px solid #000"
+     ></div>
+     <p id="valorRGB">RGB(0, 0, 0)</p>
+ 
+     <script>
+       const rojoInput = document.getElementById("rojo");
+       const verdeInput = document.getElementById("verde");
+       const azulInput = document.getElementById("azul");
+       const colorDiv = document.getElementById("color");
+       const valorRGBParrafo = document.getElementById("valorRGB");
+ 
+       const actualizarColor = () => {
+         const rojo = rojoInput.value;
+         const verde = verdeInput.value;
+         const azul = azulInput.value;
+         const colorRGB = `rgb(${rojo},${verde},${azul})`;
+ 
+         colorDiv.style.backgroundColor = colorRGB;
+         valorRGBParrafo.textContent = colorRGB.toUpperCase();
+       };
+ 
+       rojoInput.addEventListener("input", actualizarColor);
+       verdeInput.addEventListener("input", actualizarColor);
+       azulInput.addEventListener("input", actualizarColor);
+ 
+       actualizarColor();
+     </script>
+   </body>
+ </html>
+  -->
+
+<!--
+Ejercicio 3: Buscador de Películas
+Crea un buscador de películas que muestre una lista de películas coincidentes a medida que el usuario escribe en un campo de entrada.
+  
+Ejercicio 4: Reloj Mundial
+Crea un reloj mundial que muestre la hora actual en diferentes ciudades del mundo.
+  
+Ejercicio 5: Sistema de Registro y Inicio de Sesión
+Crea un sistema simple de registro e inicio de sesión utilizando HTML, CSS y JavaScript.
+-->

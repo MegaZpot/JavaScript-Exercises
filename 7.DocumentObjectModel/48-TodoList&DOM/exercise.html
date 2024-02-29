@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container" style="display: flex; align-items: center"></div>
+
+    <script>
+      const retrieveTodos = async () => {
+        const apiUrl = "https://jsonplaceholder.typicode.com/todos";
+        try {
+          const response = await fetch(apiUrl);
+          if (!response.ok) {
+            throw new Error("Error: Wrong URL");
+          }
+          const todos = await response.json();
+          console.log("Todos:", todos);
+          
+          const container = document.getElementById('container');
+          const todoList = document.createElement("ul");
+          todoList.className = "todo-list";
+          container.appendChild(todoList);
+
+    
+          todos.forEach((element) => {
+            const todoItem = document.createElement('li');
+            todoItem.textContent = element.title;
+            todoList.appendChild(todoItem);
+    
+          });
+
+
+          
+          
+        } catch (error) {
+          console.error("Fetch error:", error.message);
+        }
+      };
+      retrieveTodos();
+
+
+    </script>
+  </body>
+</html>

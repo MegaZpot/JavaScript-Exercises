@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pruebas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!--Crear una página con un botón. Al hacer clic en el botón, cambia el color de fondo de la página.-->
+
+    <!-- <button id="boton" onclick="cambiarColor()">
+        Boton
+    </button>
+    <script>
+        
+        function cambiarColor() {
+            const nuevoColor = "#" + Math.floor(Math.random()*14537895).toString(16);
+            document.body.style.backgroundColor = nuevoColor;
+        }
+        
+    </script> -->
+
+    <!-- Crear un reloj digital que se actualice en tiempo real. -->
+
+    <!-- <div id="reloj">
+
+    </div>
+
+    <script>
+
+        function actualizarReloj() {
+            const reloj = document.getElementById("reloj");
+            const tiempo = new Date();
+            const hora = tiempo.getHours();
+            const minutos = tiempo.getMinutes();
+            const segundos = tiempo.getSeconds();
+            reloj.innerText = `${hora}:${minutos}:${segundos}`
+        }
+        setInterval(actualizarReloj, 1000);
+
+    </script> -->
+
+    <!-- Crear una galería de imágenes que permita cambiar la imagen principal al hacer clic en miniaturas. -->
+
+    <!-- <img src="./img/descargar.jpg" alt="Imagen Principal" id="imagenPrincipal" />
+
+    <div>
+      <img
+        src="./img/descargar.jpg"
+        alt="Miniatura 1"
+        class="miniatura"
+        onclick="cambiarImagen('./img/descargar.jpg')"
+      />
+      <img
+        src="/img/img2.jpg"
+        alt="Miniatura 2"
+        class="miniatura"
+        onclick="cambiarImagen('/img/img2.jpg')"
+      />
+      <img
+        src="/img/img3.jpg"
+        alt="Miniatura 3"
+        class="miniatura"
+        onclick="cambiarImagen('/img/img3.jpg')"
+      />
+    </div>
+
+    <script>
+
+        function cambiarImagen(source) {
+            const img = document.getElementById("imagenPrincipal");
+            img.setAttribute("src", source);
+        }
+
+    </script> -->
+
+    <!-- Contador de Clicks. Crear un contador de clics que se incremente cada vez que se hace clic en un botón. -->
+
+    <!-- <p id="contador">
+
+    </p>
+    <button id="incremento" onclick="incremento()">
+        +++
+    </button>
+    <button id="decremento" onclick="decremento()">
+        ---
+    </button>
+
+    <script>
+        
+        let contador = 0;
+        function incremento() {
+            contador += 1;
+            const p = document.getElementById("contador");
+            p.innerText = contador;
+        }
+        function decremento() {
+            contador -= 1;
+            const p = document.getElementById("contador");
+            p.innerText = contador;
+        }
+
+    </script> -->
+
+    <!-- Crea un juego simple donde la computadora elige un número aleatorio y el jugador intenta adivinarlo. -->
+
+    <p>Adivina del 1 al 100</p>
+    <input type="number" id="numero-usuario">
+    <button onclick="enviarResultado()">Enviar Resultado</button>
+    <p id="resultado"></p>
+
+    <script>
+
+        const numeroResultado = Math.floor(Math.random()*100)+1;
+        let intentos = 0;
+        function enviarResultado() {
+            const numeroUsuarioInput = document.getElementById("numero-usuario");
+            const resultado = document.getElementById("resultado");
+            const numeroUsuario = parseInt(numeroUsuarioInput.value);
+
+            
+        }
+
+    </script>
+
+  </body>
+</html>

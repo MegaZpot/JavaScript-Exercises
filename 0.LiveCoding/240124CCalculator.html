@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Crear una calculadora simple con botones numéricos y de operadores. Mostrar el resultado al hacer clic en el botón de igual -->
+
+    
+
+    <input type="text" id="display" readonly>
+  <br>
+
+  <button onclick="agregarNumero('7')">7</button>
+  <button onclick="agregarNumero('8')">8</button>
+  <button onclick="agregarNumero('9')">9</button>
+  <button onclick="agregarOperador('+')">+</button>
+  <br>
+
+  <button onclick="agregarNumero('4')">4</button>
+  <button onclick="agregarNumero('5')">5</button>
+  <button onclick="agregarNumero('6')">6</button>
+  <button onclick="agregarOperador('-')">-</button>
+  <br>
+
+  <button onclick="agregarNumero('1')">1</button>
+  <button onclick="agregarNumero('2')">2</button>
+  <button onclick="agregarNumero('3')">3</button>
+  <button onclick="agregarOperador('*')">*</button>
+  <br>
+
+  <button onclick="agregarNumero('0')">0</button>
+  <button onclick="borrar()">C</button>
+  <button onclick="calcular()">=</button>
+  <button onclick="agregarOperador('/')">/</button>
+
+
+
+  <script>
+
+    const display = document.getElementById("display");
+
+    let expresion = ``;
+    
+    function actualizarDisplay(){
+        display.value = expresion;
+    }
+
+    function agregarNumero(num){
+        expresion += num;
+        actualizarDisplay();
+
+    }
+
+    function agregarOperador(op){
+        expresion += op;
+        actualizarDisplay();
+
+    }
+
+    function borrar(){
+        expresion = ``;
+        actualizarDisplay();
+    }
+    
+    function calcular(){
+        try{
+            let resultado = eval(expresion);
+            expresion = resultado.toString();
+            actualizarDisplay()
+        } catch (err){
+            console.error(err);
+        }
+    }
+
+  </script>
+
+
+
+
+
+
+
+</body>
+</html>

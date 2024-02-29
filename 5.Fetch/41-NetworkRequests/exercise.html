@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="container">
+    <form id="todo-form">
+      <div>
+        <label id="todo-title-label">Title</label>
+        <input type="text" id="todo-title" />
+      </div>
+      <div>
+        <label>Completed</label>
+        <input type="checkbox" id="todo-completed" />
+      </div>
+
+      <button type="submit" id="submit-todo">Submit</button>
+    </form>
+  </div>
+  <script>
+
+    const submitButton = document.getElementById('submit-todo');
+    const apiUrl = 'https://jsonplaceholder.typicode.com/todos';
+    
+    const clickHandler = async (event) => {
+      event.preventDefault(); //Evita el envio del formulario dado al comportamiento default del boton submit.
+
+      //Tomamos los datos que se encuentran en los input.
+
+      const newTodoTitle = document.getElementById('todo-title').value;  
+      const newTodoCompleted = document.getElementById('todo-completed').checked;
+      const newTodo = {
+        title: newTodoTitle,
+        completed : newTodoCompleted
+      }
+      //////////////////////////////////////////////////
+
+      try{
+        const response = await fetch(apiUrl,{
+          method: 'POST',
+          headers: {
+            'Content-Type' : 'application/json'
+          },
+          body: JSON.stringify(newTodo)
+        });
+        const data = await response.json();
+
+        if (!response.ok){
+          console.log(data.description);
+          return;
+        }
+
+        console.log(data);
+      } catch (error){
+        console.log(error);
+      }
+    }
+
+    submitButton.addEventListener('click', clickHandler);
+
+    </script>
+</body>
+</html>

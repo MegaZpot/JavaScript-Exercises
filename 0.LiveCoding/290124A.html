@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pruebas</title>
+    <link rel="stylesheet" href="style.css" />
+
+  </head>
+
+  <body>
+   
+    <!-- Ejercicio 1: Cambiar el color de fondo al hacer clic en un botón y al pasar el mouse sobre el botón
+    Haz una solicitud fetch a una API pública para obtener un color aleatorio y cambia el color de fondo de la página cuando se haga clic en un botón. Además, cambia el color del botón al pasar el mouse sobre él.
+    api: https://www.colr.org/json/color/random -->
+
+    <!-- <button id="boton"></button>
+
+    <script>
+
+      async function getRandColor() {
+        const response = await fetch("https://www.colr.org/json/color/random");
+        const data = await response.json();
+        console.log("#"+data.colors[0].hex);
+        document.body.style.backgroundColor = "#"+data.colors[0].hex;
+      }
+
+      document.getElementById("boton").addEventListener("mouseover", ()=>{
+        document.body.style.backgroundColor = "blue";
+      })
+      document.getElementById("boton").addEventListener("click", ()=>{
+        getRandColor();
+      })
+      // document.getElementById("boton").addEventListener("mouseout", ()=>{
+      //   document.body.style.backgroundColor = "";
+      // })
+
+    </script> -->
+
+    <!-- Ejercicio 2: Mostrar una alerta con información adicional al hacer clic en un botón y al presionar la tecla Enter
+    Haz una solicitud fetch a una API pública para obtener información y muestra una alerta con esta información cuando se haga clic en un botón. Además, muestra la misma alerta cuando se presione la tecla Enter.
+    api: https://api.ipify.org?format=json -->
+
+
+    <!-- <button id="boton"></button>
+
+    <script>
+
+      function mostrarAlerta() {
+        fetch("https://api.ipify.org?format=json")
+          .then(response => response.json())
+          .then(data => alert(`Direccion: ${data.ip}`))
+      }
+
+      document.getElementById("boton").addEventListener("click", mostrarAlerta);
+
+      document.getElementById("boton").addEventListener("keydown", (event)=>{
+        if(event.key==="Enter") {
+          mostrarAlerta();
+          //reload
+        } else if (event.key===" "){
+          event.preventDefault();
+        }
+      })
+      
+
+    </script> -->
+
+    <!-- Ejercicio 3: Cambiar el contenido de un elemento al hacer clic en un botón y al pasar el mouse sobre el botón
+    Haz una solicitud fetch a una API pública para obtener datos y cambia el contenido de un elemento en la página cuando se haga clic en un botón. Además, cambia el texto del botón al pasar el mouse sobre él.
+    https://api.chucknorris.io/jokes/random -->
+
+      <div></div>
+
+      <button></button>
+
+  </body>
+
+</html>
